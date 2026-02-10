@@ -1,0 +1,89 @@
+.game-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+  max-width: 500px;
+  font-size: 1.1rem;
+}
+
+.play-area {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 2px dashed #aaa;
+  background: #f9f9f9;
+  overflow: hidden;
+}
+
+/* Game box */
+.box {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: #ff5252;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: top 0.15s ease, left 0.15s ease;
+
+  /* Mobile tap improvement */
+  touch-action: manipulation;
+}
+
+/* Game over screen */
+.game-over {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  button {
+    margin-top: 15px;
+    padding: 14px 28px;
+    font-size: 1rem;
+    border-radius: 6px;
+  }
+}
+
+/* 📱 Small devices */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .info {
+    font-size: 1rem;
+  }
+
+  .box {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* 📱 Very small phones */
+@media (max-width: 400px) {
+  .box {
+    width: 90px;
+    height: 90px;
+  }
+}
