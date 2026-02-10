@@ -1,0 +1,23 @@
+<div class="game-container">
+  <h1>🎯 Click The Box</h1>
+
+  <div class="info">
+    <span>Score: {{ score }}</span>
+    <span>Time: {{ timeLeft }}s</span>
+  </div>
+
+  <div class="play-area">
+    <div
+      class="box"
+      [ngStyle]="boxStyle"
+      (click)="boxClicked()"
+      *ngIf="!gameOver"
+    ></div>
+
+    <div class="game-over" *ngIf="gameOver">
+      <h2>Game Over</h2>
+      <p>Your Score: {{ score }}</p>
+      <button (click)="restart()">Restart</button>
+    </div>
+  </div>
+</div>
